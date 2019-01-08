@@ -2,28 +2,28 @@
 
 int main()
 {
-	int i, j, k, termNum;
-	int a, b, c, d;
-	int tmp[21], coef[21];
+    int i, j, k, termNum;
+    int a, b, c, d;
+    int tmp[21], coef[21];
 
-	scanf("%d%d%d%d", &a, &b, &c, &d);
+    scanf("%d%d%d%d", &a, &b, &c, &d);
 
-	/*initialization*/
-	for(i=0;i<21;i++)
-	{
-		coef[i] = 0;
-		tmp[i] = 0;
-	}
+    /*initialization*/
+    for(i=0; i<21; i++)
+    {
+        coef[i] = 0;
+        tmp[i] = 0;
+    }
 
-	coef[0] = c;
-	coef[1] = b;
-	coef[2] = a;
+    coef[0] = c;
+    coef[1] = b;
+    coef[2] = a;
 
-	if(d == 1)
+    if(d == 1)
     {
         printf("%d %d %d\n", a, b, c);
     }
-	else
+    else
     {
         for(i=2; i<=d; i++)
         {
@@ -54,5 +54,5 @@ int main()
         printf("\n");
     }
 
-	return 0;
+    return 0;
 }
