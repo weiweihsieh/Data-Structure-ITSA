@@ -8,13 +8,14 @@ int main()
 
     scanf("%d", &n);
 
-    for(i=6; i<=n; i++)
+    for(i=1; i<=n; i++)
     {
         if(isPerfectNum(i) == 0)
         {
-            printf("%d\n", i);
+            printf("%d ", i);
         }
     }
+    printf("\n");
 
     return 0;
 }
@@ -40,7 +41,7 @@ int isPerfectNum(int num)
         k++;
     }
 
-    if(sum == num) //num is perfect number
+    if(sum == num && sum != 1) //num is perfect number
         return 0;
 
     return 1;
