@@ -1,30 +1,29 @@
 #include <stdio.h>
 
-int isPerfectNum(int num);
+ int isPerfectNum(int num);
 
-int main()
+ int main()
 {
     int i, n;
 
-    scanf("%d", &n);
+     scanf("%d", &n);
 
-    for(i=1; i<=n; i++)
+     for(i=6; i<=n; i++)
     {
         if(isPerfectNum(i) == 0)
         {
-            printf("%d ", i);
+            printf("%d\n", i);
         }
     }
-    printf("\n");
 
-    return 0;
+     return 0;
 }
 
-int isPerfectNum(int num)
+ int isPerfectNum(int num)
 {
     int sum, k, factor;
 
-    sum = 0;
+     sum = 0;
     k = 1;
     while(k*k <= num)
     {
@@ -32,17 +31,17 @@ int isPerfectNum(int num)
         {
             sum += k;
 
-            factor = num/k;
+             factor = num/k;
 
-            if(factor != num && factor != k)
+             if(factor != num && factor != k)
                 sum += factor;
         }
 
-        k++;
+         k++;
     }
 
-    if(sum == num && sum != 1) //num is perfect number
+     if(sum == num) //num is perfect number
         return 0;
 
-    return 1;
+     return 1;
 }
